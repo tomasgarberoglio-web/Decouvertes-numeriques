@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- empêcher le référencement -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+
+<title>P5js intro</title>
+
+<!-- pour les mobiles -->
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0" />
+<!-- favicon -->
+<link rel="shortcut icon" type="image/png" href="PLEINFichier 7@300x.png"/>
+<!-- style -->
+ <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="scroll-container">
+	<header>
+    <h1>
+      Découvertes numeriques
+    </h1>
+   
+    <p> 
+      <!-- les "class" c'est comme des styles de paragraphe sur indesign, elles sont reutilisables sur plusieurs choses en meme temps -->
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed egestas risus, nec efficitur odio. Morbi nec auctor sem. Pellentesque imperdiet euismod risus, quis consequat libero ullamcorper lacinia. In tincidunt nisi ut tempor porttitor. Morbi vehicula vitae turpis at facilisis. Integer at tempor purus. Nullam consequat nisi enim, quis sodales metus hendrerit nec. Donec ullamcorper sapien quis lobortis tempor. Nam vestibulum laoreet magna, id pellentesque justo volutpat ac. Phasellus arcu nisl, aliquam sed lectus vel, mattis dapibus arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum eu nisl eget eros porta tempus.
+    </p>
+     <br>
+       <h2>Sources :</h2>
+       <p>
+        Source globale : <br>
+        https://gallica.bnf.fr/accueil/fr/html/accueil-fr  <br>
+        <br>
+        Source precises (certaines images) : https://gallica.bnf.fr/ark:/12148/bpt6k1090961f/f1.item <br>
+       https://gallica.bnf.fr/ark:/12148/bpt6k1511938h/f1.item <br>
+       https://gallica.bnf.fr/ark:/12148/bpt6k1511938h/f1.item <br>
+       https://gallica.bnf.fr/ark:/12148/btv1b100723030/f1.item <br>
+       https://gallica.bnf.fr/ark:/12148/btv1b8600249g?rk=42918;4 <br>
+      </p>
+  </header>
+<video autoplay="true" muted="true" src="video/1.mp4" loop="true"></video> 
+<figure>
+<video autoplay="true" muted="true" src="video/3.mp4" loop="true"></video>
+<figcaption>Experimentation with p5js : interaction between video and canvas</figcaption>
+</figure>
+<video autoplay="true" muted="true" src="video/6.mp4" loop="true"></video>
+<aside>
+  tnrjnbjnw
+</aside>
+<video class="fullPage pasDeMarge" autoplay="true" muted="true" src="video/2.mp4" loop="true"></video>
+<video class="fullPage pasDeMarge" autoplay="true" muted="true" src="video/2_1.mp4" loop="true"></video>
+<video class="fullPage" autoplay="true" muted="true" src="video/2_2.mp4" loop="true"></video>
+<video autoplay="true" muted="true" src="video/5.mp4" loop="true"></video>
+<video autoplay="true" muted="true" src="video/4.mp4" loop="true"></video>
+</body>
+</html>
+
+
+
+<!-- ne pas toucher  -->
+<script>
+const container = document.querySelector('html');
+document.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+}, { passive: false });
+
+const video = document.querySelectorAll('.hoverPlay');
+video.forEach((v) => {
+  v.addEventListener('mouseenter', () => {
+  v.play();
+});
+v.addEventListener('mouseleave', () => {
+  v.pause();
+  v.currentTime = 0; // revient au début
+});
+})
+
+</script>
