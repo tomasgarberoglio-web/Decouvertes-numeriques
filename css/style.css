@@ -1,7 +1,7 @@
 :root {
 	/* marges : */
-  --margeDeLaPage: 100px;
-  --espaceEntreLesBlocs : 80px;
+  --margeDeLaPage: 40px;
+  --espaceEntreLesBlocs : 222px;
 
   /* couleurs */
   --couleurTitre :rgb(255, 248, 203);
@@ -59,6 +59,7 @@ h2{
 	font-size: var(--fontSizeH2);
 	font-style: italic;
 	margin-bottom: 10px;
+	
 }
 
 body{
@@ -108,13 +109,26 @@ figcaption{
 background-color: blueviolet;
 
 }
-
+.interligne{
+ 	line-height : 18px;
+}
 .pasDeMarge{
   margin: 0px;
 }
+.moinsDeMarge{
+--espaceEntreLesBlocs : 26px;
+}
 
+.bottom
+{
+padding-top: 446px;
+}
+ 
 @font-face {
   font-family: "matypo";
   src:
     url("../Basteleur-Bold.woff") format("woff");
 }
+.texte-gras {
+  color: rgb(255, 248, 203);
+}   
